@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('configuration', function (Blueprint $table) {
             $table->id();
+            $table->string('configuration_name');
+            $table->mediumText('configuration_description');
             $table->timestamps();
         });
     }

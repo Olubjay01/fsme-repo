@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('enterprise', function (Blueprint $table) {
             $table->id();
+            $table->string('enterprise_name');
+            $table->mediumText('enterprise_location');
+            $table->string('enterprise_region');
             $table->timestamps();
         });
     }
