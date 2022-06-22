@@ -19,9 +19,9 @@ class DashboardController extends Controller
 
         $user = Auth::user();
         $audit = new Audit();
-        $audit->audit_description="{$audit->name} logged in to the Admin Dashboard";
-        $audit->activity="An Admin: {$audit->name} logged in to the Admin Dashboard";
-        $audit->user_id=$user->id;
+        $audit->audit_description = "{$user->name} logged in to the Admin Dashboard";
+        $audit->activity = "Admin Dashboard Page";
+        $audit->user_id = $user->id;
         $audit->save();
 
         return view('admin.dashboard', compact('category', 'users'));
