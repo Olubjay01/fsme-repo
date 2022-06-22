@@ -9,7 +9,7 @@ class Audit extends Model
 {
     use HasFactory;
 
-    protected $table='audit';
+    protected $table = 'audit';
 
     protected $fillable = [
         'audit_id',

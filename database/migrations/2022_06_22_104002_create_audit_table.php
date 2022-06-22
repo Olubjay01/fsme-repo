@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('audit', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id');
-            $table->string('audit_description');
+            $table->string('audit_description')->nullable();
+            $table->mediumText('activity');
             $table->timestamps();
         });
     }
