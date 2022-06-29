@@ -3,9 +3,9 @@
 @section('content')
 <div class="container-fluid px-4">
     <div class="row">
-        <h3 class="mt-4">Users' Summary
-            <button class="btn bg-dark text-white float-end">Add New User</button>
-        </h3>
+        <h4 class="mt-4">Users' Summary
+            <a href="{{url('admin/user')}}" class="btn bg-dark text-white btn-sm float-end">Add New User</a>
+        </h4>
     </div>
     <hr>
     <div class="row">

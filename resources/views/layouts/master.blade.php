@@ -25,14 +25,12 @@
     @include('layouts.inc.admin-navbar')
     <div id="layoutSidenav">
         @include('layouts.inc.admin-sidebar')
-
         <div id="layoutSidenav_content">
             <main>
                 @yield('content')
             </main>
             @include('layouts.inc.admin-footer')
         </div>
-
     </div>
 
     <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>

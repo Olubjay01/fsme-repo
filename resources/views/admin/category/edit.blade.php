@@ -1,4 +1,4 @@
-@extends('Layouts.master')
+@extends('layouts.master')
 @section('title','Admin-Edit-Category')
 @section('content')
 <div class="container-fluid px-4">

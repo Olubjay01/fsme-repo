@@ -8,6 +8,8 @@ Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index
 
 Auth::routes();
 
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
@@ -26,4 +28,8 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/edit-post/{post_id}',[App\Http\Controllers\Admin\PostController::class, 'edit']);
     Route::put('/update-post/{post_id}',[App\Http\Controllers\Admin\PostController::class, 'update']);
     Route::get('/delete-post/{post_id}',[App\Http\Controllers\Admin\PostController::class, 'destroy']);
+
+    //User Routes
+    Route::get('/user',[App\Http\Controllers\Admin\UserController::class, 'index']);
+
 });
